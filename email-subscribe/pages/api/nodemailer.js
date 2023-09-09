@@ -21,7 +21,7 @@ export default async function handler(req, res){
         subject: "Diet and Fitness newletter",
         text: "Dear subscriber\n\nThank you for testing out this email subscription.\n\n\nPlease note this is a mini project and not a real subscription service\nPlease do not reply to this email."
     };
-    
+    res.send('Status: 200');
     await new Promise((resolve, reject) => {
         transporter.sendMail(options, function(err, info){
         if(err){
@@ -30,7 +30,5 @@ export default async function handler(req, res){
         }
     
     })
-});
-    console.log("sent");
-    res.send('Status: 200');
+    
 }
