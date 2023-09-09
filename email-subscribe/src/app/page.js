@@ -40,7 +40,7 @@ export default function Home() {
                                 if(regex.test(value.substring(value.indexOf('@')+1))){
                                     sendMail(value);
                                 }
-                                // emailIn.value = "";
+                                
                             }}>Subscribe</button>
                         </form>
                     </div>
