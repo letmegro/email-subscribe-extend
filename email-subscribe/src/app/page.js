@@ -7,6 +7,7 @@ async function sendMail(em){
         method: 'POST',
         body: JSON.stringify({ Email : em}) //em contains name of email that is sent in
     });
+    console.log("here2");
 }
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
                                 if(regex.test(value.substring(value.indexOf('@')+1))){
                                     sendMail(value);
                                 }
-                                console.log("here");
+                                
                             }}>Subscribe</button>
                         </form>
                     </div>
