@@ -19,7 +19,7 @@ export default function handler(req, res){
         from: process.env.NEXT_ESERVER,
         to: email,
         subject: "Diet and Fitness newletter",
-        text: "Dear subscriber\n\nYou're receiving this email as a confirmation that\nyou have subscribed to our newsletter!\n\nThankYou!"
+        text: "Dear subscriber\n\nThank you for testing out this email subscription.\n\n\nPlease note this is a mini project and not a real subscription service\nPlease do not reply to this email."
     };
     
     transporter.sendMail(options, function(err, info){
