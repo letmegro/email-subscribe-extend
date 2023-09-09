@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-
+console.log("test");
 const transporter = nodemailer.createTransport({
     service: "hotmail",
     port: 587,
