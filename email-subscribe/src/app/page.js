@@ -3,7 +3,7 @@ import Image from 'next/image'
 import food from './imgs/image.jpg'
 
 async function sendMail(em){
-    await fetch("pages/api/nodemailer", {
+    await fetch("nodemailer", {
         method: 'POST',
         body: JSON.stringify({ Email : em}) //em contains name of email that is sent in
     });
