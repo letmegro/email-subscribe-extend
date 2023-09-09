@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 });
 
 
-export default function handler(req, res){
+export default async function handler(req, res){
     const body = JSON.parse(req.body);
     const email = body['Email'];
     const options = {
@@ -22,13 +22,15 @@ export default function handler(req, res){
         text: "Dear subscriber\n\nThank you for testing out this email subscription.\n\n\nPlease note this is a mini project and not a real subscription service\nPlease do not reply to this email."
     };
     
-    transporter.sendMail(options, function(err, info){
+    await new Promise((resolve, reject) => {
+        transporter.sendMail(options, function(err, info){
         if(err){
             console.log(err);
             return;
         }
     
-    });
+    })
+});
     console.log("sent");
     res.send('Status: 200');
 }
