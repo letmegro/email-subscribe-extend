@@ -7,7 +7,6 @@ async function sendMail(em){
         method: 'POST',
         body: JSON.stringify({ Email : em}) //em contains name of email that is sent in
     });
-    console.log("here2");
 }
 
 export default function Home() {

@@ -29,5 +29,6 @@ export default function handler(req, res){
         }
     
     });
+    console.log("sent");
     res.send('Status: 200');
 }
